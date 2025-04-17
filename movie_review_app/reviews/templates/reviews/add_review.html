@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <h1>Leave a Review</h1>
+
+    <form method="POST">
+      {% csrf_token %}
+      {{ form }}
+      <button type="submit">Submit Review</button>
+    </form>
+
+  </body>
+</html>

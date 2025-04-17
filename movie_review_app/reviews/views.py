@@ -29,4 +29,7 @@ def suggest_movie(request):
 
     return render(request, "reviews/suggest_movie.html", {"form": form})
 
+
+def suggested_page(request):
+    return render(request, "reviews/suggested_page.html")
 # Create your views here.
