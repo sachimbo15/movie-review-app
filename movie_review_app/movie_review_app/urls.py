@@ -23,5 +23,5 @@ urlpatterns = [
     path('movie-list/', views.movie_list, name='movie-list'),
     path('add-review/', views.add_review, name='add-review'),
     path('suggest-movie/', views.suggest_movie, name='suggest_movie'),
-
+    path('suggested_page/', views.suggested_page, name='suggested_page')
 ]

@@ -32,4 +32,9 @@ def suggest_movie(request):
 
 def suggested_page(request):
     return render(request, "reviews/suggested_page.html")
+
+
+def suggested_movies(request):
+    suggestions = MovieSuggestion.objects.all()
+    return render(request,"reviews/suggested_page.html", {"suggestions": suggestions })
 # Create your views here.
