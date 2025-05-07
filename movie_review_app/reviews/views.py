@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Movie, MovieSuggestion
 from .forms import ReviewForm, MovieSuggestionForm
+
 
 def movie_list(request):
     movies = Movie.objects.all()
@@ -37,4 +38,10 @@ def suggested_page(request):
 def suggested_movies(request):
     suggestions = MovieSuggestion.objects.all()
     return render(request,"reviews/suggested_page.html", {"suggestions": suggestions })
+
+def movie_detail(request, movie_id):
+    movie = get_object_or_404(Movie, pk=movie_id)
+    return render(request, "reviews/movie_detail.html", {"movie": movie})
+
+
 # Create your views here.
